@@ -30,7 +30,8 @@ def action_csv(txt):
         # Make the columns wider for clarity.
         worksheet.set_column(0, max_col - 1, 12)
 
-        writer.save()
+        # automatically saves the file
+        writer.close()
         print("Generated " + output_name)
     except:
         print("Fatal error: corrupted file.")
